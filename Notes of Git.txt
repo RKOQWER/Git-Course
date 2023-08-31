@@ -1,0 +1,170 @@
+1. At present we are present in Working area. When we add some files using git add. we move from working to staging area. When we commit the files then those files are moved from staging area to local repository . Whem we use push command then these files move from local to central repository(github).
+
+2. Some of the git commands:
+
+* init --> It is used to initialise or reinitialise a git repository
+
+
+* clone  ---> To take existing project from repository to local system we will use git clone command.
+
+		Syntax:  git clone <repo-url>
+
+
+
+* git add : This command is used to add files to the staging area. 
+			Synatx : git add file-name
+
+			git add <file-path/file-name>
+
+  git add . ---> To add all the files at a time
+
+
+* status  ---> Used to check what all files are in staging area , unstaged and untracked
+
+
+* git commit ---> Use to commit our changes to git local repository
+
+		Syntax: git commit -m " Commit message"
+
+	Git local repository will be available in our machine locally.
+
+	When we execute git commit commad it will consider all the files in the staging area.
+
+
+* push ---> To commit our files to the central repository we should execute the following commands:-
+		
+		git remote add <repo-url> (this required only first time)
+
+
+		git push -u origin master (this is used to move changes from local to central)
+
+
+
+
+
+* pull  ---> Before making any changes to files in local , it is highly recommended to take latest changes from repository. To take latest changes from repository we will use git pull command.
+
+	Syntax : git pull
+
+
+* checkout  ---> It is used to discard changes done in a file.
+
+		Synatx: git checkout -- <file-name>.
+
+		It is also used to move from one branch to another
+
+		Syntax : git checkout <branch-name>
+
+
+
+* reset --> It is used to unstage a file
+
+		Syntax : git reset HEAD <file-name>
+
+
+* log  ----> To check commit history we will use git log command. 
+		Syntax:  git log
+
+	In commit logs it will display below details:
+	a) commit-id
+	b) author
+	c) timestamps
+	d) commit msg
+
+
+
+
+* rm
+* branch
+* merge
+* rebase
+
+
+* stash  ---> 
+The git stash command in Git allows you to temporarily save changes that you're working on in a "stash" and revert your working directory back to a clean state. This can be particularly useful in scenarios where you're not ready to commit your changes but need to switch to a different branch or deal with an urgent issue. Here's a scenario where git stash might be useful:
+
+Imagine you're working on a new feature in a branch called feature/awesome in your Git repository. While working on this feature, you receive a report about a critical bug that needs an urgent fix in the master branch. 
+You're actively making changes in the feature/awesome branch, adding new code and modifying existing files.Suddenly, you receive a critical bug report in the production version (the master branch) that needs to be fixed immediately.
+You're not ready to commit your changes in the feature/awesome branch yet, but you can't afford to wait. To quickly switch to the master branch and address the bug, you decide to stash your changes:
+git stash
+Now that your working directory is clean (as it was before you started the feature work), you can switch to the master branch and address the urgent bug:
+
+git checkout master
+# Fix the critical bug
+git commit -m "Fixed critical bug"
+Apply Stashed Changes:
+
+After fixing the critical bug, you can switch back to your feature branch and apply the stashed changes:
+git checkout feature/awesome
+git stash apply
+
+
+You've successfully fixed the bug in the master branch and applied your stashed changes back to the feature/awesome branch. Now you can continue working on your feature without losing any progress.
+Using git stash in this scenario allowed you to quickly switch between branches, address an urgent bug, and seamlessly resume your feature work without losing any code. It's important to note that git stash is a versatile tool that helps you manage your work effectively in various situations where you need to temporarily set aside your changes.
+
+
+*** git stash apply ---> To apply thae changes back that you have stashed
+
+*** git stash list ---> Used to see all the stash work
+
+*** git stash clear ---> To clear all changes from stash area
+
+
+
+
+* git help ---> It provides frequently used git commands.
+
+* git help command-name ---> It opens documentation for that command.
+
+* git rm ---> This command is used to un-stage newly created files.
+
+	Syntax : git rm --cached file-name
+
+
+
+3. Staged files are those files that are added and they are ready to commit.
+
+4. Unstaged files: Modified files will be displayed here , we need to stage these files to commit.
+
+5. Un tracked files : These are newly created files , we need to add them to commit.
+
+6. Whenever we will commit git will generate commit id . Commit ID will contain 40 alphanumeric characters . From 40 alphanumeric characters it will display first 7 charcaters to us.
+
+7. The sequence for project:-
+
+	1. Create a folder in your local machine
+
+	2. Make the folder structure
+
+	3. git init
+
+	4. git add .
+
+	5. git commit 
+
+	6. git remote add origin <repo-url>
+
+	7. git branch -M main
+
+	8. git push -u origin main
+
+8. Branches in git are nothing but codebases. We can create several branches in git repository. Some of the most created branches are:-
+
+	- master
+	- develop
+	- feature
+	- QA
+	- UAT
+	- release
+
+
+9. If we execute git clone <repo-url> it clones master branch code by default. 
+
+   If we want to clone specific branch code then we should execute below command:
+
+   git -b <branch-name> <repo-url>
+
+
+10. git fetch command that tells your local git to retrive the latest meta-data info from the origin (yet doesn't do any file transfering. Tt's more like just checking to see if there are any chnages available )  
+
+11. git pull command will get latest changes from central repository to local repository (file transferring will happen there. )
