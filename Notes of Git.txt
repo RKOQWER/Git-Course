@@ -134,19 +134,22 @@ Using git stash in this scenario allowed you to quickly switch between branches,
 
 	1. Create a folder in your local machine
 
-	2. Make the folder structure
+	2. Create the folder structure
 
 	3. git init
 
-	4. git add .
+	4. Do coding
 
-	5. git commit 
+	5. git add .
 
-	6. git remote add origin <repo-url>
+	6. git commit 
 
-	7. git branch -M main
+	7. git remote add origin <repo-url> (The name of git folder in github and the name of folder in local machine need not be 
+	same.
 
-	8. git push -u origin main
+	8. git branch -M main
+
+	10. git push -u origin main
 
 8. Branches in git are nothing but codebases. We can create several branches in git repository. Some of the most created branches are:-
 
