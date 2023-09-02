@@ -57,9 +57,7 @@
 git switch -c <new-branch-name>
 
 
-* reset --> It is used to unstage a file
-
-		Syntax : git reset HEAD <file-name>
+* restore:  use "git restore --staged <file>..." to unstage a file i.e remove it from staging area.
 
 
 * log  ----> To check commit history we will use git log command. 
@@ -73,8 +71,6 @@ git switch -c <new-branch-name>
 
 
 
-
-* rm
 
 * branch --> git branch is used to show all the branches present in our git repository.
 
@@ -90,7 +86,6 @@ Syntax : git branch : Shows all the branches present
 
 * reset ---> git reset --hard <commit-id> : To move your branch to that commit id (no detached head )
 
-* rebase
 
 
 * stash  ---> 
@@ -162,12 +157,13 @@ Using git stash in this scenario allowed you to quickly switch between branches,
 
 	6. git commit 
 
+	7. Create the repository in GITHUB
+
 	7. git remote add origin <repo-url> (The name of git folder in github and the name of folder in local machine need not be 
 	same.
 
-	8. git branch -M main
+	8. git push -u origin master
 
-	10. git push -u origin main
 
 8. Branches in git are nothing but codebases. We can create several branches in git repository. Some of the most created branches are:-
 
@@ -189,3 +185,34 @@ Using git stash in this scenario allowed you to quickly switch between branches,
 10. git fetch command that tells your local git to retrive the latest meta-data info from the origin (yet doesn't do any file transfering. Tt's more like just checking to see if there are any chnages available )  
 
 11. git pull command will get latest changes from central repository to local repository (file transferring will happen there. )
+
+12. git remote -v : It helps us to check if we have any remote available or not.
+
+13. git remote add origin <git-repo url> : To make out changes go to central repository (github)
+
+14. git push -u origin master:
+Here origin is the name of remote directory
+master is the master branch 
+We are pushing the changes in master branch to remote.
+
+15. git pull origin master
+
+16. Collaborating with the team:-
+	1. Go to settings
+	2. Go to Collaborators option
+	3. Sign in 
+	4. Invite a collaborator using email
+
+17. Collaborator has same rights as the paresnt user . The collaborator do not have to use git remote add origin <rpo-url>
+if the parent user has aleready used this once.
+
+18. Fork , pull request and merge:-
+
+	1. Identify the project on which you want to contribute.
+	2. Fork the project. This will create an exact copy oi the project under your account.
+	3. Clone the project from your account.
+	4. Make the changes , commit the changes and push the changes into your GIt Repository.
+	5. Whenever we clone a repository GIT will by default make the clone to point to that particular remote repository. So we 	dont have to execute git remote add origin <repo-url>
+	6. Go to pull request and select new pull request , now it will make the changes to point to the parent repository
+	7. This pull request will now be seen by the owner of the project.  The owner can now make decision .
+
