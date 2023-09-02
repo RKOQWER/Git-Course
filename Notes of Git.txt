@@ -51,10 +51,10 @@
 
 		Synatx: git checkout -- <file-name>.
 
-		It is also used to move from one branch to another
+		git checkout <commit-id> : It is used to move you to commit-id but your branch does not shifts to that commit-id 
+		as in the case with git reset --hard commit-id. Here detached head phenomenon occurs and the HEAD insted of pointing to the branch starts pointing to the commit . We do necessary changes here and the commit it. After that we have to create a new branch to accomodate for the changes that we did using the command :
 
-		Syntax : git checkout <branch-name>
-
+git switch -c <new-branch-name>
 
 
 * reset --> It is used to unstage a file
@@ -75,8 +75,21 @@
 
 
 * rm
-* branch
-* merge
+
+* branch --> git branch is used to show all the branches present in our git repository.
+
+Syntax : git branch : Shows all the branches present
+
+	git branch <branch-name> : used to create new branch in git
+
+	git switch <branch-name> : To move from your current branch to the branch-name branch.
+
+
+
+* merge  ---> git merge <branch-name> : It will merge your current branch with branch-name branch
+
+* reset ---> git reset --hard <commit-id> : To move your branch to that commit id (no detached head )
+
 * rebase
 
 
@@ -119,6 +132,11 @@ Using git stash in this scenario allowed you to quickly switch between branches,
 * git rm ---> This command is used to un-stage newly created files.
 
 	Syntax : git rm --cached file-name
+
+* git log ---> Shows the history of all commits made
+	Syntax : git log
+
+* 
 
 
 
